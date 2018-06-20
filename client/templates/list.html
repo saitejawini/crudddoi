@@ -1,0 +1,58 @@
+<html>
+
+<head>
+		<style>
+				.panel-default{
+					margin: auto;
+					width: 100%;
+					height:100%;
+					border: 1px solid #0F0217;
+					padding: 15px;
+					background-color:rgba(58, 84, 202, 0.705);
+				}
+			</style>
+</head>
+
+<body>
+
+	<div class="panel panel-default" ng-init="getDevice()">
+		<div class="panel-heading">
+			<p class="panel-title"><strong><span style="color:rgb(255, 255, 255)" ><b>Devices</b></span></strong></p>
+		</div>
+		<div class="panel-body" style="width: 100%;">
+			<table class="table" style="width:100%;">
+				<thead>
+					<tr>
+						<th><span style="color:rgb(255, 255, 255)">Device Name</span></th>
+						<th><span style="color:rgb(255, 255, 255)">DeviceId</span></th>
+						<th><span style="color:rgb(255, 255, 255)">Device Status</span></th>
+						<th><span style="color:rgb(255, 255, 255)">Cost</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="device in devices">
+
+						<td><span style="color:rgb(0, 0, 0)">{{ device.Dname }}</span></td>
+						<td><span style="color:rgb(0, 0, 0)">{{ device.Did }}</span></td>
+						<td><span style="color:rgb(0, 0, 0)">{{ device.Dstatus }}</span></td>
+						<td><span style="color:rgb(0, 0, 0)">{{ device.cost }}</span></td>
+						<td>
+							<a href="#/Device/{{device._id}}/read" class="btn  btn-light"> Show  </a>
+							<a href="#/Device/{{device._id}}/update" class="btn btn-primary">Edit  </a>
+							<a ng-click="deleteDevice(device._id)" class="btn btn-danger">Delete </a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<br><br><br><br><br><br><br><br><br>
+		<br>
+		<br>
+
+
+
+	</div>
+</body>
+
+</html>

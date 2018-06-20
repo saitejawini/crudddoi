@@ -1,0 +1,56 @@
+<html>
+
+<head>
+		<style>
+				.panel{
+					margin: auto;
+					width: 100%;
+					border: 1px solid #0F0217;
+					padding: 15px;
+					background-color: rgba(58, 84, 202, 0.705);
+				}
+			</style>
+</head>
+
+<body>
+
+	<div class="panel">
+		<div class="panel-heading">
+			<p class="panel-title"><span style="color:rgb(255, 255, 255)">Add Devices</span></p>
+		</div>
+		<div class="panel-body">
+			<form ng-submit="addDevice()">
+
+				<div class="form-group">
+					<label for="name"><span style="color:rgb(255, 255, 255)">Device Name:</span></label>
+					<input type="text" placeholder="Enter Device name" class="form-control" id="name" ng-model="device.Dname" required autofocus>
+				</div>
+
+				<div class="form-group">
+					<label for="id"><span style="color:rgb(255, 255, 255)">Device Id:</span></label>
+					<input type="text" placeholder="Enter Device Id" class="form-control" id="state" ng-model="device.Did" required autofocus>
+				</div>
+
+				<div class="form-group">
+					<label for="brand"><span style="color:rgb(255, 255, 255)">Status:</span></label>
+					<select ng-model="device.Dstatus" placeholder="Yes/No" class="form-control" id="price" required>
+						<option style="font-weight: lighter;" value="">Select Availability</option>  
+						<option value="Yes">Yes</option>
+						  <option value="Yes">No</option>
+						  </select>
+				</div>
+
+				<div class="form-group">
+					<label for="cat"><span style="color:rgb(255, 255, 255)">Cost in ₹:</span></label>
+					<input type="number"  placeholder="Price ₹" class="form-control" id="quatity" ng-model="device.cost" required autofocus>
+				</div>
+
+				<button type="submit" style="color:black;" class="btn btn-success">Save</button>
+				<a href="#/Device" class="btn btn-danger"> Cancel</a>
+			</form>
+
+		</div>
+	</div>
+</body>
+
+</html>

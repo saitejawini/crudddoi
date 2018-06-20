@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<style>
+	.panel-default{
+		margin: auto;
+		width: 100%;
+		border: 1px solid #0F0217;
+		padding: 15px;
+		background-color: rgba(58, 84, 202, 0.705);
+	}
+</style>
+</head>
+
+<body>
+	<div class="panel panel-default" ng-init="showDevice()">
+		<div class="panel-heading">
+			<p class="panel-title"><span style="color:rgb(255, 255, 255)"> Devices</span></p>
+		</div>
+		<div class="panel-body">
+			<form>
+				<div class="form-group">
+					<label class="form-control">Device Name: {{ device.Dname }}</label>
+					<label class="form-control">DeviceStatus: {{ device.Did }}</label>
+					<label class="form-control">Availability: {{ device.Dstatus }}</label>
+					<label class="form-control">Cost: {{ device.cost }}</label>
+
+					<label class="form-control">ID: {{ device._id }}</label>
+					<a href="#/Device" class="btn btn-danger"> Cancel</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

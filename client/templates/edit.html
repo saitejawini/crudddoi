@@ -1,0 +1,48 @@
+<html>
+
+<head>
+	<style>
+		.panel-default{
+					margin: auto;
+					width: 100%;
+					border: 1px solid #0F0217;
+					padding: 15px;
+					background-color:rgba(58, 84, 202, 0.705);
+				}
+		</style>
+</head>
+
+<body>
+	<div class="panel panel-default" ng-init="showDevice()">
+		<div class="panel-heading">
+			<p class="panel-title"><span style="color:#5bc0de;" class="glyphicon glyphicon-edit"> </span> Edit Devices</p>
+		</div>
+
+		<div class="panel-body">
+			<form ng-submit="updateDevice()">
+				<div class="form-group">
+					<label for="name">Device Name:</label>
+					<input type="text"  placeholder="Name"  class="form-control" id="name" ng-model="device.Dname" value="device.Dname" required autofocus>
+				</div>
+				<div class="form-group">
+					<label for="state">DeviceId:</label>
+					<input type="text" placeholder="State Name" class="form-control" id="state" ng-model="device.Did" value="device.Did" required autofocus>
+				</div>
+				<div class="form-group">
+					<label for="price">Status:</label>
+					<input type="text" placeholder="Price(in numbers)"  class="form-control" id="price" ng-model="device.Dstatus" value="device.Dstatus" required autofocus>
+				</div>
+				<div class="form-group">
+					<label for="quantity">Cost:</label>
+					<input type="number"  placeholder="Quantity(in numbers)"class="form-control" id="quantity" ng-model="device.cost" value="device.cost" required autofocus>
+				</div>
+
+
+				<button type="submit" class="btn btn-success">Update</button>
+				<a href="#/Device" class="btn btn-danger"> Cancel</a>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
